@@ -1,6 +1,6 @@
-# ReScript Project Template
+# Civ ReScript
 
-The only official ReScript starter template.
+Civ 6 Picker With A UI
 
 ## Installation
 
