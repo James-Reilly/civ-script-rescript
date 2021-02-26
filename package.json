@@ -1,10 +1,14 @@
 {
-  "name": "rescript-project-template",
+  "name": "civ-picker",
   "version": "0.0.1",
   "scripts": {
     "build": "bsb -make-world",
+    "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
-    "start": "bsb -make-world -w"
+    "webpack": "webpack -w",
+    "webpack:production": "NODE_ENV=production webpack",
+    "server": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "rescript"
@@ -12,6 +16,20 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "*"
+    "bs-platform": "*",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "reason-react": "^0.9",
+    "@jsiebern/bs-material-ui": "^2.0.2",
+    "@mscharley/bs-material-ui-icons": "^1.0.3",
+    "@material-ui/core": "^4.11.3"
   }
 }

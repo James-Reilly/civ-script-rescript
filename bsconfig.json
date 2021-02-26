@@ -1,6 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json",
-  "name": "rescript-project-template",
+  "name": "civ-picker",
+  "reason": {
+    "react-jsx": 3
+  },
   "version": "0.0.1",
   "sources": {
     "dir" : "src",
@@ -12,6 +15,9 @@
   },
   "suffix": ".bs.js",
   "bs-dependencies": [
+    "reason-react",
+    "@jsiebern/bs-material-ui",
+    "@mscharley/bs-material-ui-icons"
   ],
   "warnings": {
     "error" : "+101"

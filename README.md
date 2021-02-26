@@ -4,18 +4,21 @@ The only official ReScript starter template.
 
 ## Installation
 
+Install ReScript Globally
+`npm install -g bs-platform`
+
 ```sh
-npm install
+yarn install
 ```
 
 ## Build
 
-- Build: `npm run build`
-- Clean: `npm run clean`
-- Build & watch: `npm run start`
+- Build: `yarn run build`
+- Clean: `yarn run clean`
+- Build & watch: `yarn run start`
 
 ## Run
 
 ```sh
-node src/Demo.bs.js
+yarn run server
 ```
