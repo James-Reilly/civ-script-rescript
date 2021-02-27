@@ -1,30 +1,23 @@
-type state = {count: int};
-
-type action =
-  | Increment
-  | Decrement;
-
-let initialState = {count: 0};
-
-let reducer = (state, action) =>
-  switch (action) {
-  | Increment => {count: state.count + 1}
-  | Decrement => {count: state.count - 1}
-  };
+open MaterialUi
 
 @react.component
 let make = () => {
-  let url = ReasonReactRouter.useUrl()
-  let (playerNames: list<string>, setPlayerNames) = React.useState(_ => list{})
-  open MaterialUi
+    let url = ReasonReactRouter.useUrl()
+    let (playerNames: list<string>, setPlayerNames) = React.useState(_ => list{})
+    let theme = MaterialUi_Theme.create({
+        open MaterialUi_ThemeOptions
+        make(~palette=PaletteOptions.make(~primary=Primary.make(~main="#90caf9", ()), ~_type="dark", ()), ())
+    });
 
-  <main>
-    <Container>
-        {switch url.path {
-            | list{"output"} => <Civs playerNames />
-            // | _ => <div> { React.string("setup") }</div>
-            | _ => <Setup playerNames setPlayerNames /> 
-        }} 
-    </Container>
-  </main>;
+    <main>
+        <Container>
+            <ThemeProvider theme>
+                {switch url.path {
+                    | list{"output"} => <Civs playerNames />
+                    | _ => <Setup playerNames setPlayerNames /> 
+                }} 
+
+            </ThemeProvider>
+        </Container>
+    </main>;
 };

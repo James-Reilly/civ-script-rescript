@@ -22,7 +22,7 @@ let make = (~playerNames, ~setPlayerNames) => {
 
     <Grid container=true spacing={#V3} alignItems=#Center>
         <Grid item=true xs={Grid.Xs._12}>
-            <h2>{ React.string("Setup") }</h2>
+            <Typography variant=#H4 color=#TextPrimary>{ React.string("Setup") }</Typography>
         </Grid>
         <Grid item=true xs={Grid.Xs._10}>
             <TextField 
@@ -59,11 +59,11 @@ let make = (~playerNames, ~setPlayerNames) => {
                 ()
             )
         >
-            <h4>{ React.string("Player List") }</h4>
+            <Typography variant=#H5 color=#TextPrimary>{ React.string("Player List") }</Typography>
             {playerNames
             ->Belt.List.toArray
             ->Belt.Array.map(playerName =>
-                <div key={playerName}> { React.string(playerName) }</div>
+                <Typography color=#TextPrimary key={playerName}> { React.string(playerName) }</Typography>
             )
             ->React.array}
         </Grid>
