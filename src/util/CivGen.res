@@ -1,9 +1,9 @@
 
 type civLeader = {
     civName: string,
-    civAbility: string
-    civUniqueUnit: string
-    civUniqueInfrastructure: string
+    civAbility: string,
+    civUniqueUnit: string,
+    civUniqueInfrastructure: string,
     leaderName: string,
     leaderBonus: string,
     leaderUniqueUnit: string
@@ -17,9 +17,9 @@ type player = {
 let data: list<civLeader> = list{
   {
     civName: "America",
-    civAbility: "All Diplomatic policy slots in the current government are converted to Wildcard slots. +1 Diplomatic Favor Diplomatic Favor per turn for each Wildcard slot in the current government."
-    civUniqueUnit: "P-51 Mustang" 
-    civUniqueInfrastructure: "Film Studio"
+    civAbility: "All Diplomatic policy slots in the current government are converted to Wildcard slots. +1 Diplomatic Favor Diplomatic Favor per turn for each Wildcard slot in the current government.",
+    civUniqueUnit: "P-51 Mustang",
+    civUniqueInfrastructure: "Film Studio",
     leaderName: "Teddy Roosevelt (Bull Moose)",
     leaderBonus: "Breathtaking tiles gain +2 Science Science when adjacent to a Natural Wonder or Mountain, and +2 Culture Culture when adjacent to a Wonder or Woods. +1 Appeal in all tiles in cities with a National Park.",
     leaderUniqueUnit: ""
