@@ -4,7 +4,7 @@ let make = (~playerNames: list<string>) => {
     let players = CivGen.genPlayers(playerNames);
 
     <div>
-        <h3>{ React.string("Output") }</h3>
+        <Typography variant=#H4 color=#TextPrimary gutterBottom=true>{ React.string("Output") }</Typography>
         <Grid container=true spacing={#V3} alignItems=#Center>
             {players
             ->Belt.List.toArray
@@ -25,7 +25,7 @@ let make = (~playerNames: list<string>) => {
                                                 ()
                                             )
                                         >
-                                            { React.string(Js.String.replace("Leader: ", "", civ.leaderName))}
+                                            { React.string(civ.leaderName) }
                                         </Typography>
                                         <Typography>{ React.string(civ.civName)}</Typography>
                                     </AccordionSummary>
